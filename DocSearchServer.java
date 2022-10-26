@@ -44,7 +44,7 @@ class Handler implements URLHandler {
                String result = "";
                List<String> foundPaths = new ArrayList<>();
                for(File f: paths) {
-                   if(FileHelpers.readFile(f).contains(parameters[1])) {
+                   if(f.toString().contains(parameters[1])) {
                        foundPaths.add(f.toString());
                    }
                }
